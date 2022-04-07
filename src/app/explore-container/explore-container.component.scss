@@ -12,6 +12,11 @@
   font-size: 20px;
   line-height: 26px;
 }
+::ng-deep body[data-theme="dark"]{
+  strong{
+    color: yellow;
+  }
+}
 
 #container p {
   font-size: 16px;

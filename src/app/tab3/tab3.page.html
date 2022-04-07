@@ -13,5 +13,26 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="darkMode.currentMode" (ionChange)="changeTheme($event)" >
+      <ion-list-header>
+        <ion-label>Appearance</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Light</ion-label>
+        <ion-radio slot="start" value="light"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Dark</ion-label>
+        <ion-radio slot="start" value="dark"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Auto</ion-label>
+        <ion-radio slot="start" value="auto"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
 </ion-content>
