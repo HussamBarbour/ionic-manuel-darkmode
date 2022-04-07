@@ -1,1 +1,1 @@
-# ionic-manuel-darkmode
+# ionic 6 manuel darkmode example
