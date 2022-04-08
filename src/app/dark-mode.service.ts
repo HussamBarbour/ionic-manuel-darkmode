@@ -5,7 +5,7 @@ import { Storage } from '@ionic/storage-angular';
   providedIn: 'root'
 })
 export class DarkModeService {
-  currentMode = 'auto';
+  currentMode = 'light';
   private store: Storage | null = null;
 
   constructor(private storage: Storage) {
@@ -18,9 +18,9 @@ export class DarkModeService {
       this.checkSystem();
     } else {
       document.body.setAttribute('data-theme',mode);
+      this.currentMode = mode;
     }
     this.store?.set('theme',mode);
-    this.currentMode = mode;
   }
 
   async checkMode(){
